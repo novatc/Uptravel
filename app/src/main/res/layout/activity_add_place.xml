@@ -45,7 +45,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/edit_text_hint_title"
                     android:inputType="textCapWords"
-                    android:textColor="@color/primary_text_color"
+                    android:textColor="@color/white"
                     android:textColorHint="@color/rich_black_blue"
                     android:textSize="@dimen/edit_text_text_size" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -66,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/edit_text_hint_description"
                     android:inputType="textCapSentences"
-                    android:textColor="@color/primary_text_color"
+                    android:textColor="@color/white"
                     android:textColorHint="@color/rich_black_blue"
                     android:textSize="@dimen/edit_text_text_size" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -89,7 +89,7 @@
                     android:inputType="text"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
-                    android:textColor="@color/primary_text_color"
+                    android:textColor="@color/white"
                     android:textColorHint="@color/rich_black_blue"
                     android:textSize="@dimen/edit_text_text_size" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/edit_text_hint_location"
                     android:inputType="text"
-                    android:textColor="@color/primary_text_color"
+                    android:textColor="@color/white"
                     android:textColorHint="@color/rich_black_blue"
                     android:textSize="@dimen/edit_text_text_size" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -159,7 +159,7 @@
                 android:paddingTop="@dimen/add_screen_btn_save_paddingTopBottom"
                 android:paddingBottom="@dimen/add_screen_btn_save_paddingTopBottom"
                 android:text="@string/btn_text_save"
-                android:textColor="@color/rich_black_blue"
+                android:textColor="@color/white"
                 android:textSize="@dimen/btn_text_size"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "120334119560",
+    "project_id": "uptravel-bc3ed",
+    "storage_bucket": "uptravel-bc3ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120334119560:android:def89c9805e576967ba53d",
+        "android_client_info": {
+          "package_name": "com.novatc.uptravel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120334119560-gfeqe64388isrbdf4dofpd869l10fvn7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR9pWwU_Gd5lVyntieNytbxQug69S_rWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120334119560-gfeqe64388isrbdf4dofpd869l10fvn7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

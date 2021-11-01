@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
+import com.novatc.uptravel.Firebase.FirestoreClass
 import com.novatc.uptravel.R
 import com.novatc.uptravel.model.BaseActivity
+import com.novatc.uptravel.model.User
 import kotlinx.android.synthetic.main.activity_sign_in.*
 
 class SignInActivity : BaseActivity() {
@@ -26,12 +28,7 @@ class SignInActivity : BaseActivity() {
             FirebaseAuth.getInstance().signInWithEmailAndPassword(mail, password).addOnCompleteListener {
                     task ->
                 if(task.isSuccessful){
-                    Toast.makeText(
-                        this@SignInActivity,
-                        "Erfolgreich angemeldet",
-                        Toast.LENGTH_LONG
-                    ).show()
-                    startActivity(Intent(this@SignInActivity, MainActivity::class.java))
+                    FirestoreClass().signInUser(this)
                 }else{
                     Toast.makeText(
                         this@SignInActivity,
@@ -43,12 +40,10 @@ class SignInActivity : BaseActivity() {
         }
     }
 
-    fun userRegisteredSuccess(){
-        Toast.makeText(this,"Successfully registered", Toast.LENGTH_LONG).show()
-        FirebaseAuth.getInstance().signOut()
+    fun signInSuccess(loggedInUse: User) {
+        startActivity(Intent(this@SignInActivity, MainActivity::class.java))
         finish()
     }
-
 
 
 }

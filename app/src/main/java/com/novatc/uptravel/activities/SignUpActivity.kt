@@ -8,8 +8,10 @@ import android.widget.Toast
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.novatc.uptravel.Firebase.FirestoreClass
 import com.novatc.uptravel.R
 import com.novatc.uptravel.model.BaseActivity
+import com.novatc.uptravel.model.User
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : BaseActivity() {
@@ -25,7 +27,9 @@ class SignUpActivity : BaseActivity() {
     }
 
     fun userRegisteredSuccess() {
-        TODO("Not yet implemented")
+        Toast.makeText(this, "Successfully registered", Toast.LENGTH_LONG).show()
+        FirebaseAuth.getInstance().signOut()
+        finish()
     }
 
     private fun registerUser() {
@@ -40,12 +44,9 @@ class SignUpActivity : BaseActivity() {
                         val firebaseUser: FirebaseUser = task.result!!.user!!
                         val registeredMail = firebaseUser.email!!
 
-                        Toast.makeText(
-                            this@SignUpActivity, "$name hat sich erfolgreich mit " +
-                                    "der $registeredMail registriert.", Toast.LENGTH_LONG
-                        ).show()
-                        FirebaseAuth.getInstance().signOut()
-                        startActivity(Intent(this, IntroActivity::class.java))
+                        val  user = User(firebaseUser.uid, name, registeredMail)
+                        FirestoreClass().registerUser(this@SignUpActivity, user)
+
 
                     } else {
                         // If sign in fails, display a message to the user.

@@ -94,6 +94,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/sign_up_screen_btn_marginTop"
                     android:foreground="?attr/selectableItemBackground"
+                    android:background="@color/blue_NCS"
                     android:gravity="center"
                     android:text="@string/sign_in"
                     android:textColor="@android:color/white">

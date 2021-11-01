@@ -8,10 +8,11 @@
         <entry key="..\:/Users/lwwag/AndroidStudioProjects/Uptravel/app/src/main/res/drawable/shape_image_view_border.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/lwwag/AndroidStudioProjects/Uptravel/app/src/main/res/layout/activity_add_place.xml" value="0.24456521739130435" />
         <entry key="..\:/Users/lwwag/AndroidStudioProjects/Uptravel/app/src/main/res/layout/activity_intro.xml" value="0.24456521739130435" />
-        <entry key="..\:/Users/lwwag/AndroidStudioProjects/Uptravel/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/lwwag/AndroidStudioProjects/Uptravel/app/src/main/res/layout/activity_sign_in.xml" value="0.1" />
-        <entry key="..\:/Users/lwwag/AndroidStudioProjects/Uptravel/app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
+        <entry key="..\:/Users/lwwag/AndroidStudioProjects/Uptravel/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/lwwag/AndroidStudioProjects/Uptravel/app/src/main/res/layout/activity_sign_in.xml" value="0.25" />
+        <entry key="..\:/Users/lwwag/AndroidStudioProjects/Uptravel/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
         <entry key="..\:/Users/lwwag/AndroidStudioProjects/Uptravel/app/src/main/res/layout/activity_splash.xml" value="0.24456521739130435" />
+        <entry key="..\:/Users/lwwag/AndroidStudioProjects/Uptravel/app/src/main/res/layout/item_place.xml" value="0.254981884057971" />
       </map>
     </option>
   </component>
@@ -20,5 +21,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
   </component>
 </project>

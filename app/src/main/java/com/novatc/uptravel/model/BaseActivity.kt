@@ -1,9 +1,11 @@
 package com.novatc.uptravel.model
 
 import android.os.Build
+import android.text.TextUtils
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowInsetsController
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 open class BaseActivity : AppCompatActivity() {
@@ -19,6 +21,42 @@ open class BaseActivity : AppCompatActivity() {
             if (controler != null) {
                 controler.hide(WindowInsets.Type.statusBars())
                 controler.systemBarsBehavior = WindowInsetsController.BEHAVIOR_SHOW_BARS_BY_SWIPE
+            }
+        }
+    }
+
+    fun validateForm(name: String, mail: String, password: String): Boolean {
+        return when {
+            TextUtils.isEmpty(name) -> {
+                Toast.makeText(this, "Bitte Namen angeben", Toast.LENGTH_LONG)
+                false
+            }
+            TextUtils.isEmpty(mail) -> {
+                Toast.makeText(this, "Bitte Mail angeben", Toast.LENGTH_LONG)
+                false
+            }
+            TextUtils.isEmpty(mail) -> {
+                Toast.makeText(this, "Bitte Passwort angeben", Toast.LENGTH_LONG)
+                false
+            }
+            else -> {
+                true
+            }
+        }
+    }
+
+    fun validateForm(mail: String, password: String): Boolean {
+        return when {
+            TextUtils.isEmpty(mail) -> {
+                Toast.makeText(this, "Bitte Mail angeben", Toast.LENGTH_LONG)
+                false
+            }
+            TextUtils.isEmpty(mail) -> {
+                Toast.makeText(this, "Bitte Passwort angeben", Toast.LENGTH_LONG)
+                false
+            }
+            else -> {
+                true
             }
         }
     }

@@ -13,8 +13,13 @@ class IntroActivity : BaseActivity() {
         setContentView(R.layout.activity_intro)
         super.hideStatusBar()
 
-        btn_into_skip.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+        btn_intro_log_in.setOnClickListener {
+            startActivity(Intent(this, SignInActivity::class.java))
         }
+        btn_intro_sign_up.setOnClickListener {
+            startActivity(Intent(this, SignUpActivity::class.java))
+        }
+
     }
+
 }

@@ -3,6 +3,9 @@ package com.novatc.uptravel.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import com.novatc.uptravel.Firebase.FirestoreClass
 import com.novatc.uptravel.R
 import com.novatc.uptravel.model.BaseActivity
 import kotlinx.android.synthetic.main.activity_intro.*
@@ -19,6 +22,7 @@ class IntroActivity : BaseActivity() {
         btn_intro_sign_up.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
         }
+
 
     }
 

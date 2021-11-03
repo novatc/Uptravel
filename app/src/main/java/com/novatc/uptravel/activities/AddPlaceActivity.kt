@@ -27,7 +27,9 @@ import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
+import com.novatc.uptravel.Firebase.FirestoreClass
 import com.novatc.uptravel.R
+import com.novatc.uptravel.model.BaseActivity
 import com.novatc.uptravel.model.PlacesModel
 import kotlinx.android.synthetic.main.activity_add_place.*
 import java.io.File
@@ -37,10 +39,9 @@ import java.io.OutputStream
 import java.text.SimpleDateFormat
 import java.util.*
 
-class AddPlaceActivity : AppCompatActivity(), View.OnClickListener {
+class AddPlaceActivity : BaseActivity(), View.OnClickListener {
 
     private lateinit var dateSetLisener: DatePickerDialog.OnDateSetListener
-    val db = Firebase.firestore
 
     @RequiresApi(Build.VERSION_CODES.N)
     private var cal = Calendar.getInstance()
@@ -137,29 +138,17 @@ class AddPlaceActivity : AppCompatActivity(), View.OnClickListener {
                     ).show()
                     else -> {
                         val placeModel = PlacesModel(
-                            0,
                             et_title.text.toString(),
                             saveImageToInternalStorage.toString(),
                             et_description.text.toString(),
                             et_date.text.toString(),
                             et_location.text.toString(),
-                            mLatitude,
-                            mLongitude
+                            getCurrentUserID()
                         )
-                        db.collection("Places").add(placeModel)
-                            .addOnSuccessListener { documentReference ->
-                                Toast.makeText(
-                                    this@AddPlaceActivity,
-                                    "\"DocumentSnapshot added with ID: ${documentReference.id}",
-                                    Toast.LENGTH_LONG
-                                ).show()
-                            }.addOnFailureListener { e ->
-                                Toast.makeText(
-                                    this@AddPlaceActivity,
-                                    "Error, "+e,
-                                    Toast.LENGTH_LONG
-                                ).show()
-                            }
+                        FirestoreClass().addPlaceToDB(this, placeModel)
+                        setResult(Activity.RESULT_OK)
+                        finish()
+
                     }
 
                 }

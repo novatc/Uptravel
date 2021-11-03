@@ -8,7 +8,9 @@ class User (
     val username: String = "",
     val mail: String = "",
     val fcmToken: String = "",
+    val ownPlaces: ArrayList<PlacesModel> = ArrayList(),
     val favPlaces: ArrayList<PlacesModel> = ArrayList()
+
 ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString()!!,
@@ -17,7 +19,12 @@ class User (
         parcel.readString()!!
     ) {
     }
-
+    fun addPlaceToUserList(place:PlacesModel){
+        ownPlaces.add(place)
+    }
+    fun addPlaceToFavUserList(place:PlacesModel){
+        favPlaces.add(place)
+    }
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(id)
         parcel.writeString(username)

@@ -37,4 +37,14 @@
         android:padding="@dimen/intro_button_padding"
         android:text="@string/sign_in" />
 
+    <Button
+        android:id="@+id/btn_intro_get_all_places"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_NCS"
+        android:layout_margin="@dimen/intro_button_margin"
+        android:padding="@dimen/intro_button_padding"
+        android:text="get all places" />
+
+
 </LinearLayout>

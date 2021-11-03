@@ -7,6 +7,7 @@ import android.view.WindowInsets
 import android.view.WindowInsetsController
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
 open class BaseActivity : AppCompatActivity() {
 
@@ -59,5 +60,8 @@ open class BaseActivity : AppCompatActivity() {
                 true
             }
         }
+    }
+    fun getCurrentUserID(): String{
+        return FirebaseAuth.getInstance().currentUser!!.uid
     }
 }
